@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://cdn.imgchest.com/files/pyvdcd2lnyk.png);
+    background-repeat: no-repeat;
+    max-width: auto;
+    min-height: 1583px;
+    font-size: 2rem;
+    /* opacity: .5; */
+    color: blue;
+    overflow-x: hidden;
+}
+.container > * {
+    border: 2px dashed blue;
+}
+
+.container {
+    display: grid;
+    grid-template-rows:
+        minmax(80px, 112px)
+        minmax(auto, 67px)
+        minmax(40px, 49px)
+        minmax(300px, 438px)
+        minmax(120px, 155px)
+        minmax(600px, 1128px);
+
+    grid-template-columns:
+        minmax(150px, 211px)
+        minmax(200px, 455px)
+        minmax(250px, 576px);
+    grid-template-areas:
+    "one seven eight"
+    "two two two"
+    "three three three"
+    "four four four"
+    "five five five"
+    "six six six";
+}
+
+.box1 {
+    grid-area: one;
+}
+.box2 {
+    grid-area: two;
+    display: flex;
+    align-items: stretch;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 600;
+}
+.box3 {
+    grid-area: three;
+}
+.box4 {
+    grid-area: four;
+}
+.box5 {
+    grid-area: five;
+}
+.box6 {
+    grid-area: six;
+}
+.box7 {
+    grid-area: seven;
+}
+.box8 {
+    grid-area: eight;
+}
+
+.firstItemMenu {
+    background-color: rgb(255, 31, 85);
+    color: white;
+    width: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 62px;
+}
+
+.secondItemMenu {
+    color: white;
+    background-color: rgb(42 54 61);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.insideSecondItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    column-gap: 33px;
+    margin: 0;
+    padding: 0;
+        flex-wrap: wrap;
+}
+
+.insideSecondItem li {
+    white-space: nowrap;
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+        flex-wrap: wrap;
+        width: 100%;
+}
+
+@media (max-width: 500px) {
+.container {
+	grid-template-columns: 1fr;
+	grid-template-columns: 100%;
+	grid-template-areas:
+	"one seven eight"
+	"two"
+	"three"
+	"four"
+	"five"
+	"six";
+	gap: 5px;
+	}
+
+.box2 {
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.firstItemMenu {
+	width: 100%;
+}
+
+.secondItemMenu {
+	width: 100%;
+}
+
+.insideSecondItem {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	width: 100%;
+	gap: 0;
+}
+
+.insideSecondItem li {
+	width: 100%;
+	min-height: 62px;
+	display: flex;
+	align-items: center;
+	padding: 10px 0;
+}
+}
