@@ -5,7 +5,7 @@
 body {
     background-image: url(https://cdn.imgchest.com/files/pyvdcd2lnyk.png);
     background-repeat: no-repeat;
-    max-width: 1143px;
+    max-width: 1247px;
     min-height: 1583px;
     font-size: 2rem;
     opacity: .5;
@@ -17,7 +17,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 111px 68px 49px 438px 155px 1128px ;
+    grid-template-rows: 112px 67px 49px 438px 155px 1128px ;
     grid-template-areas: 
     "one seven eight"
     "two two two"
